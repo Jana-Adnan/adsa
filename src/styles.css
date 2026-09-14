@@ -1,3 +1,122 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import 'tailwindcss';
+
+body {
+  font-family: 'Tajawal', sans-serif;
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 rounded-xl font-semibold text-white
+           bg-linear-to-r from-orange-500 to-orange-600
+           hover:from-orange-600 hover:to-orange-700
+           transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-xl font-semibold text-white
+           bg-[#161616] border border-[#262626]
+           hover:border-orange-500/50
+           transition-all duration-300;
+  }
+
+  .card {
+    @apply bg-[#161616] rounded-2xl border border-[#262626]
+           hover:border-orange-500/30 transition-all duration-500;
+  }
+
+  .glass-card {
+    @apply bg-[#161616]/60 backdrop-blur-xl border border-[#262626]
+           rounded-2xl text-center;
+  }
+
+  .section-label {
+    @apply inline-flex items-center px-4 py-1.5 rounded-full
+           bg-[#161616] border border-[#262626] text-sm font-medium
+           text-neutral-300;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-3;
+  }
+
+  .section-subtitle {
+    @apply text-neutral-500;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent;
+  }
+}
+
+@keyframes blob {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(20px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+.blob {
+  animation: blob 8s infinite ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in {
+  animation: fade-in 0.8s ease-out;
+}
+
+@layer components {
+  .input-dark {
+    @apply rounded-xl bg-[#161616] border border-[#262626]
+           text-white placeholder-neutral-500
+           focus:outline-none focus:border-orange-500/50
+           transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .prose-heading {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 3.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    scroll-margin-top: 6rem;
+  }
+
+  .prose-heading-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: rgba(249, 115, 22, 0.1);
+    border-radius: 0.75rem;
+    border: 1px solid rgba(249, 115, 22, 0.3);
+    color: #f97316;
+    flex-shrink: 0;
+  }
+}
+
+.prose-custom p {
+  color: #d4d4d4;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+}

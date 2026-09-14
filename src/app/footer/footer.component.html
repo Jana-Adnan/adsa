@@ -1,0 +1,69 @@
+<footer class="relative bg-[#0a0a0a] text-neutral-300 border-t border-[#262626]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div class="lg:col-span-1">
+        <a class="flex items-center gap-3 mb-6 group" routerLink="/home">
+          <div class="w-11 h-11 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center">
+            <span class="text-white font-bold text-xl">ع</span>
+          </div>
+          <span class="text-xl font-bold text-white">عدسة</span>
+        </a>
+        <p class="text-sm text-neutral-500 mb-6 leading-relaxed">
+          مدونة متخصصة في فن التصوير الفوتوغرافي، نشارك معكم أسرار المحترفين ونصائح عملية لتطوير مهاراتكم.
+        </p>
+        <div class="flex gap-2">
+          <a  rel="noopener noreferrer" class="w-10 h-10 bg-[#161616] border border-[#262626] hover:bg-gradient-to-br hover:from-orange-500 hover:to-orange-600 rounded-xl flex items-center justify-center text-neutral-500 hover:text-white transition-all duration-300">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a  rel="noopener noreferrer" class="w-10 h-10 bg-[#161616] border border-[#262626] hover:bg-gradient-to-br hover:from-orange-500 hover:to-orange-600 rounded-xl flex items-center justify-center text-neutral-500 hover:text-white transition-all duration-300">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a   rel="noopener noreferrer" class="w-10 h-10 bg-[#161616] border border-[#262626] hover:bg-gradient-to-br hover:from-orange-500 hover:to-orange-600 rounded-xl flex items-center justify-center text-neutral-500 hover:text-white transition-all duration-300">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a  rel="noopener noreferrer" class="w-10 h-10 bg-[#161616] border border-[#262626] hover:bg-gradient-to-br hover:from-orange-500 hover:to-orange-600 rounded-xl flex items-center justify-center text-neutral-500 hover:text-white transition-all duration-300">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold mb-6">استكشف</h3>
+        <ul class="space-y-4">
+          <li><a class="text-sm text-neutral-500 hover:text-orange-500 transition-colors duration-300" routerLink="/home">الرئيسية</a></li>
+          <li><a class="text-sm text-neutral-500 hover:text-orange-500 transition-colors duration-300" routerLink="/blog">المدونة</a></li>
+          <li><a class="text-sm text-neutral-500 hover:text-orange-500 transition-colors duration-300" routerLink="/about">من نحن</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold mb-6">التصنيفات</h3>
+        <ul class="space-y-4">
+          <li><a class="text-sm text-neutral-500 hover:text-orange-500 transition-colors duration-300" [routerLink]="['/blog']" [queryParams]="{category: 'إضاءة'}">إضاءة</a></li>
+          <li><a class="text-sm text-neutral-500 hover:text-orange-500 transition-colors duration-300" [routerLink]="['/blog']" [queryParams]="{category: 'بورتريه'}">بورتريه</a></li>
+          <li><a class="text-sm text-neutral-500 hover:text-orange-500 transition-colors duration-300" [routerLink]="['/blog']" [queryParams]="{category: 'مناظر طبيعية'}">مناظر طبيعية</a></li>
+          <li><a class="text-sm text-neutral-500 hover:text-orange-500 transition-colors duration-300" [routerLink]="['/blog']" [queryParams]="{category: 'تقنيات'}">تقنيات</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-white font-semibold mb-6">ابقى على اطلاع</h3>
+        <p class="text-sm text-neutral-500 mb-4">اشترك للحصول على أحدث المقالات والتحديثات.</p>
+        <form class="space-y-3">
+          <input placeholder="أدخل بريدك الإلكتروني" type="email"
+                 class="w-full px-4 py-3 bg-[#161616] border border-[#262626] rounded-xl text-sm text-white focus:outline-none focus:border-orange-500 placeholder-neutral-600">
+          <p class="w-full btn-primary text-sm">اشترك</p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-[#262626]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-sm text-neutral-600">© 2026 عدسة. صنع بكل <i class="fa-solid fa-heart text-orange-500"></i> جميع الحقوق محفوظة.</p>
+        <div class="flex gap-6">
+          <a class="text-sm text-neutral-600 hover:text-orange-500 transition-colors duration-300" routerLink="/privacy">سياسة الخصوصية</a>
+          <a class="text-sm text-neutral-600 hover:text-orange-500 transition-colors duration-300" routerLink="/terms">شروط الخدمة</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
